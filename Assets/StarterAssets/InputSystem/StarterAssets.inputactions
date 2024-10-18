@@ -11,7 +11,8 @@
                     "id": "6bc1aaf4-b110-4ff7-891e-5b9fe6f32c4d",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Look",
@@ -19,7 +20,8 @@
                     "id": "2690c379-f54d-45be-a724-414123833eb4",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Jump",
@@ -27,7 +29,8 @@
                     "id": "8c4abdf8-4099-493a-aa1a-129acec7c3df",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Sprint",
@@ -35,23 +38,26 @@
                     "id": "980e881e-182c-404c-8cbf-3d09fdb48fef",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Aim",
                     "type": "PassThrough",
-                    "id": "e18b5cc8-dfd1-4827-9c42-1699698e8e5e",
-                    "expectedControlType": "",
+                    "id": "e1e9c1b6-ecc5-456f-a1e7-aad31691e3ad",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Shoot",
                     "type": "Button",
-                    "id": "6302ae75-29b0-4978-946d-bbbaeedb249b",
+                    "id": "ba261e1a-1894-4552-99da-a3f0f04e2fb1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -170,7 +176,7 @@
                     "id": "ed66cbff-2900-4a62-8896-696503cfcd31",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "InvertVector2(invertX=false),ScaleVector2(x=17,y=17)",
+                    "processors": "InvertVector2(invertX=false),ScaleVector2(x=0.05,y=0.05)",
                     "groups": "KeyboardMouse",
                     "action": "Look",
                     "isComposite": false,
@@ -233,7 +239,7 @@
                 },
                 {
                     "name": "",
-                    "id": "d8d7b0bb-b4f2-4efb-b0d5-60923bca6e30",
+                    "id": "a3827e8c-3e2e-4ac6-8e53-0691b83fb272",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
@@ -244,7 +250,7 @@
                 },
                 {
                     "name": "",
-                    "id": "3c6d1296-578c-4619-af41-9ed8c5810409",
+                    "id": "1b163662-fb2f-42ce-98ea-c14eb38f1a51",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
@@ -255,7 +261,7 @@
                 },
                 {
                     "name": "",
-                    "id": "829f6ed0-f249-4989-8cf4-7bc705ef01b4",
+                    "id": "9a5ad6fd-7739-4a1c-991b-7193367c12d2",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -266,7 +272,7 @@
                 },
                 {
                     "name": "",
-                    "id": "bd2ab178-d307-4492-973e-23a5d04bd72d",
+                    "id": "26795c9c-4654-4d77-8861-aa4f3ce0abaf",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",

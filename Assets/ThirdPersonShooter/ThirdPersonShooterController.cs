@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using StarterAssets;
@@ -58,8 +56,8 @@ public class ThirdPersonShooterController : MonoBehaviour {
         }
 
 
-        if (starterAssetsInputs.shoot) {
-            /*
+        /*if (starterAssetsInputs.shoot) {
+            
             // Hit Scan Shoot
             if (hitTransform != null) {
                 // Hit something
@@ -71,14 +69,14 @@ public class ThirdPersonShooterController : MonoBehaviour {
                     Instantiate(vfxHitRed, mouseWorldPosition, Quaternion.identity);
                 }
             }
-            //*/
-            //*
+            //
+            //
             // Projectile Shoot
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-            //*/
+            //
             starterAssetsInputs.shoot = false;
-        }
+        }*/
 
     }
 
