@@ -36,12 +36,4 @@ public class NavAgentTest : MonoBehaviour
             agent.isStopped = true;
         }
     }
-    //private void OnTriggerExit(Collider collision)
-    //{
-    //    if (collision.gameObject.CompareTag("TrafficLightBlocker"))
-    //    {
-    //        Debug.Log("Uncollided");
-    //        agent.isStopped = false;
-    //    }
-    //}
 }

@@ -9,7 +9,6 @@ public class ShooterController : MonoBehaviour
     [SerializeField] private float normalSensitivity;
     [SerializeField] private float aimSensitivity;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
-    [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform pfBulletProjectile;
     [SerializeField] private Transform spawnBulletPosition;
     [SerializeField] private Transform vfxHitGreen;
@@ -32,7 +31,6 @@ public class ShooterController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         Transform hitTransform = null;
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask)) {
-            debugTransform.position = raycastHit.point;
             mouseWorldPosition = raycastHit.point;
             hitTransform = raycastHit.transform;
         }
@@ -55,6 +53,9 @@ public class ShooterController : MonoBehaviour
             animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 13f));
         }
 
+        if (starterAssetsInputs.shoot && !starterAssetsInputs.aim) {
+            starterAssetsInputs.shoot = false;
+        }
 
         if (starterAssetsInputs.shoot && starterAssetsInputs.aim) {
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;

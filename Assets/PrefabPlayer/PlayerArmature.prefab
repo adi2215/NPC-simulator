@@ -461,7 +461,6 @@ MonoBehaviour:
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 1
-  debugTransform: {fileID: 0}
   pfBulletProjectile: {fileID: 6863857337172796870, guid: 9fc5deab5fef94d41b92a7112049f302, type: 3}
   spawnBulletPosition: {fileID: 313225961302826981}
   vfxHitGreen: {fileID: 613433886817584985, guid: 6e845b0e80fad2d4c93ff505a0750129, type: 3}
@@ -1557,6 +1556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1339233102159695550}
+  - {fileID: 313225961302826981}
   - {fileID: 4504485945280379816}
   m_Father: {fileID: 8984996343394673045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1647,7 +1647,6 @@ Transform:
   - {fileID: 4814648925178715541}
   - {fileID: 4598413952483938270}
   - {fileID: 8200791078591161526}
-  - {fileID: 313225961302826981}
   m_Father: {fileID: 7195008599146034772}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 270}
 --- !u!33 &3459629593417521525
@@ -1746,12 +1745,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4449961630630186544}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0009, y: 0.0776, z: 0.3268}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.5000001, y: -0.49999994, z: -0.5000001, w: -0.49999994}
+  m_LocalPosition: {x: 1.2274532, y: 1.3301301, z: 0.07226777}
+  m_LocalScale: {x: 0.90000004, y: 0.9000001, z: 0.89999986}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2383390913756002736}
+  m_Father: {fileID: 927597756086735033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4638028386250759538
 GameObject:
