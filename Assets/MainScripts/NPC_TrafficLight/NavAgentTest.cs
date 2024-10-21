@@ -9,12 +9,12 @@ public class NavAgentTest : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject target;
     private GameObject blocker = null;
+    
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Vector3.Distance(agent.destination, target.transform.position) > 0.1)
