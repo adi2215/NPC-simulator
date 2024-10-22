@@ -14,12 +14,12 @@ public class ShooterController : MonoBehaviour
     [SerializeField] private Transform spawnBulletPosition;
     [SerializeField] private Transform vfxHitGreen;
     [SerializeField] private Transform vfxHitRed;
-    [SerializeField] private float aimDistance = 10f;
+    [SerializeField] private float aimDistance = 20f;
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
-    private bool isAimingAtNPC;
+    private bool isAimingAtNPC = false;
 
     private void Awake() {
         thirdPersonController = GetComponent<ThirdPersonController>();
@@ -36,24 +36,6 @@ public class ShooterController : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask)) {
             mouseWorldPosition = raycastHit.point;
             hitTransform = raycastHit.transform;
-
-            if (Physics.Raycast(ray, out RaycastHit hit, aimDistance, npcLayer))
-            {
-                if (hit.collider.CompareTag("NPC"))
-                {
-                    if (!isAimingAtNPC)
-                    {
-                        isAimingAtNPC = true;
-                        hit.collider.GetComponent<AI_Agent>().OnPlayerAiming(true);
-                    }
-                }
-            }
-
-            else if (isAimingAtNPC)
-            {
-                isAimingAtNPC = false;
-                hit.collider.GetComponent<AI_Agent>().OnPlayerAiming(false);
-            }
         }
 
         if (starterAssetsInputs.aim) {
@@ -67,7 +49,18 @@ public class ShooterController : MonoBehaviour
             Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
 
             transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
+
+            if (Physics.Raycast(ray, out RaycastHit hit, aimDistance, npcLayer))
+            {
+                if (!isAimingAtNPC)
+                {
+                    isAimingAtNPC = true;
+                    hit.collider.GetComponent<AI_Agent>().OnPlayerAiming(this.gameObject);
+                }
+            }
+
         } else {
+            isAimingAtNPC = false;
             aimVirtualCamera.gameObject.SetActive(false);
             thirdPersonController.SetSensitivity(normalSensitivity);
             thirdPersonController.SetRotateOnMove(true);
